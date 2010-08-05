@@ -1,0 +1,65 @@
+h1. CalendarView[REMIX] (for Prototype)
+
+h2. Why a calendar date picker for a framework waning in popularity?
+
+There are projects in the wild that are deep into prototypeland and still need functionality added.
+
+h2. Usage
+
+Demonstration of the plugin can be seen in @examples/index.html@  which shows a few different calendar types in action.
+
+h5{color:#aaa;background:#efefef;padding:0 .25em}. &darr; HTML
+
+<pre><code><div id="calendarview_input">
+  <label for="date_input">Date</label><br />
+  <input type="text" name="date_input" value="" id="date_input" />
+</div></code></pre>
+
+h5{color:#aaa;background:#efefef;padding:0 .25em}. &darr; JAVASCRIPT
+
+<pre><code>$('calendarview_input').calendarviewable();</code></pre>
+
+h3. Details
+
+Currently the identifier for the editable field needs to be on the DOM object containing the input element that a calendar should be attached to. 
+
+This is not ideal but it works for the moment. If the DOM object the calendar is being attached to isn't an input field but a DIV or the like the 'dateField' id needs to be passed in for the calendar to be added:
+
+h5{color:#aaa;background:#efefef;padding:0 .25em}. &darr; HTML
+
+<pre><code><div id="date_display">
+  01/01/2010
+</div></code></pre>
+
+h5{color:#aaa;background:#efefef;padding:0 .25em}. &darr; JAVASCRIPT
+
+<pre><code>$('calendarview_input').calendarviewable({
+  'dateField' : 'date_display'
+  'dateFormat' : '%d/%m/%Y%'
+});</code></pre>
+
+p={background:#ffc;padding:.75em}. *NOTE* _The date format has to be passed with the options for the date parsing to work correctly._
+
+
+|_<. Date Formatting |_.  |_<. dateFormat |
+| 01/01/2010 | &rarr; | @'%d/%m/%Y'@ |
+| Friday Jan 1st, 2010 | &rarr; | '%A %b %O, %Y' |
+| Jan 1, 2010 | &rarr; | '%b %e, %Y' |
+| 2010-01-01 | &rarr; | '%Y-%m-%d' |
+
+h2. Acknowledgment
+  
+*"Calendarview":http://github.com/jsmecham/calendarview/* is the original plugin that was the foundation for this hack and slash version.
+CalendarView is developed and maintained by "Justin Mecham":mailto:justin@aspect.net.
+"calendarview.org":http://calendarview.org/
+
+The Design and constructor pattern were heavily informed by the "better-edit-in-place":http://github.com/nakajima/better-edit-in-place plugin.
+
+h2. TODO
+
+ * Better README
+ * Do some Object instantiation options voodoo because the current way is ugly and brittle.
+ * Probe date_patches.js to assess what's what - if it does things that are already handled
+   by default etc…
+ * Testing!?
+ * Gemify?
