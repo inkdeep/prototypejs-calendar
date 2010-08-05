@@ -38,7 +38,7 @@ h5. &darr; JAVASCRIPT
   'dateFormat' : '%d/%m/%Y%'
 });</code></pre>
 
-p={background:#ffc;padding:.75em}. *NOTE* _The date format has to be passed with the options for the date parsing to work correctly._
+p=. *NOTE* _The date format has to be passed with the options for the date parsing to work correctly._
 
 
 |_<. Date Formatting |_.  |_<. dateFormat |
