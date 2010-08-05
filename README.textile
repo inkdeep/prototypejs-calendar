@@ -62,4 +62,4 @@ h2. TODO
  * Probe date_patches.js to assess what's what - if it does things that are already handled
    by default etc…
  * Testing!?
- * Gemify?
+ * Rake install task _or_ Gemify?
