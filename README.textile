@@ -8,14 +8,14 @@ h2. Usage
 
 Demonstration of the plugin can be seen in @examples/index.html@  which shows a few different calendar types in action.
 
-h5{color:#aaa;background:#efefef;padding:0 .25em}. &darr; HTML
+h5. &darr; HTML
 
 <pre><code><div id="calendarview_input">
   <label for="date_input">Date</label><br />
   <input type="text" name="date_input" value="" id="date_input" />
 </div></code></pre>
 
-h5{color:#aaa;background:#efefef;padding:0 .25em}. &darr; JAVASCRIPT
+h5. &darr; JAVASCRIPT
 
 <pre><code>$('calendarview_input').calendarviewable();</code></pre>
 
@@ -25,13 +25,13 @@ Currently the identifier for the editable field needs to be on the DOM object co
 
 This is not ideal but it works for the moment. If the DOM object the calendar is being attached to isn't an input field but a DIV or the like the 'dateField' id needs to be passed in for the calendar to be added:
 
-h5{color:#aaa;background:#efefef;padding:0 .25em}. &darr; HTML
+h5. &darr; HTML
 
 <pre><code><div id="date_display">
   01/01/2010
 </div></code></pre>
 
-h5{color:#aaa;background:#efefef;padding:0 .25em}. &darr; JAVASCRIPT
+h5. &darr; JAVASCRIPT
 
 <pre><code>$('calendarview_input').calendarviewable({
   'dateField' : 'date_display'
