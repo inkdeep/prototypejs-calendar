@@ -1,6 +1,6 @@
 h1. CalendarView[REMIX] (for Prototype)
 
-h3. Why a calendar date picker for a framework waining in popularity?
+h4. Why a calendar date picker for a framework waining in popularity?
 
 There are projects in the wild that are deep into prototypeland and still need functionality added.
 
