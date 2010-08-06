@@ -1,6 +1,6 @@
 h1. Not Ready for public comsumption. Its broke as frak.
 
-h1. ☠
+h1{font-size:130%}. ☠
 
 h1. CalendarView[REMIX] (for Prototype)
 
