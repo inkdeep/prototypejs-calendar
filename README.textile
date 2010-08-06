@@ -67,7 +67,8 @@ h2. TODO
    by default etc…
  * Testing!?
  * Rake install task _or_ Gemify?
-
+<notextile>
 <style type="text/css" media="screen">
   h1 strong {font-size:2em;}
 </style>
+</notextile>
