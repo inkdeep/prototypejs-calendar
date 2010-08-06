@@ -1,6 +1,6 @@
 h1. Not Ready for public comsumption. Its broke as frak.
 
-h1{size:130%}. ☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠
+h1. *☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠*
 
 h1. CalendarView[REMIX] (for Prototype)
 
@@ -67,3 +67,7 @@ h2. TODO
    by default etc…
  * Testing!?
  * Rake install task _or_ Gemify?
+
+<style type="text/css" media="screen">
+  h1 strong .caps {font-size:2em;}
+</style>
