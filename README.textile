@@ -69,5 +69,5 @@ h2. TODO
  * Rake install task _or_ Gemify?
 
 <style type="text/css" media="screen">
-  h1 strong .caps {font-size:2em;}
+  h1 strong {font-size:2em;}
 </style>
