@@ -1,3 +1,7 @@
+h1. Not Ready for public comsumption. Its broke as frak.
+
+h1. ☠
+
 h1. CalendarView[REMIX] (for Prototype)
 
 h4. Why a calendar date picker for a framework waning in popularity?
@@ -53,7 +57,7 @@ h2. Acknowledgment
 CalendarView is developed and maintained by "Justin Mecham":mailto:justin@aspect.net.
 "calendarview.org":http://calendarview.org/
 
-The Design and constructor pattern were heavily informed by the "better-edit-in-place":http://github.com/nakajima/better-edit-in-place plugin.
+The design and constructor pattern were heavily informed by the "better-edit-in-place":http://github.com/nakajima/better-edit-in-place plugin.
 
 h2. TODO
 
