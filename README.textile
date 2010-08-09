@@ -1,8 +1,9 @@
-h1. Not Ready for public comsumption. Its broke as frak.
+h1. A calendar for use with prototype
 
-h1. ☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠
-
-h1. CalendarView[REMIX] (for Prototype)
+ * It pops up!
+ * It embeds!
+ * It can be delegated!
+ * It is kinda friendly!
 
 h4. Why a calendar date picker for a framework waning in popularity?
 
@@ -31,8 +32,10 @@ This is not ideal but it works for the moment. If the DOM object the calendar is
 
 h5. &darr; HTML
 
-<pre><code><div id="date_display">
-  01/01/2010
+<pre><code><div id="calendarview_input">
+  <div id="date_display">
+    01/01/2010
+  </div>
 </div></code></pre>
 
 h5. &darr; JAVASCRIPT
@@ -42,7 +45,7 @@ h5. &darr; JAVASCRIPT
   'dateFormat' : '%d/%m/%Y%'
 });</code></pre>
 
-p=. *NOTE* _The date format has to be passed with the options for the date parsing to work correctly._
+p=. *NOTE* _The date format has to be added to the options for the date parsing to work correctly._
 
 
 |_<. Date Formatting |_.  |_<. dateFormat |
@@ -50,6 +53,8 @@ p=. *NOTE* _The date format has to be passed with the options for the date parsi
 | Friday Jan 1st, 2010 | &rarr; | @'%A %b %O, %Y'@ |
 | Jan 1, 2010 | &rarr; | @'%b %e, %Y'@ |
 | 2010-01-01 | &rarr; | @'%Y-%m-%d'@ |
+
+If the calendar is being added when an event happens (like a mouse click on a input/DOM Object) @'activated': true@ needs to added to the options or the calendar will not display on the first click.
 
 h2. Acknowledgment
   

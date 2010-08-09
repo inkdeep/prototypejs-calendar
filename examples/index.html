@@ -3,94 +3,12 @@
   <head>
     <meta charset="UTF-8">
     <title>CalendarView — JavaScript Calendar Widget</title>
-    <link rel="stylesheet" href="../stylesheets/calendarview.css">
-    <style>
-      html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outline:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
-      html {
-        font-size:   75%; /* 12px relative to 16px */
-        line-height: 18px;
-      }
-      html,
-      button, input, select, textarea {
-        font-family: Arial, Helvetica, Verdana, Tahoma, "Bitstream Vera Sans", sans-serif;
-      }
-      html {
-        color: rgb(51,51,51); /* darkest gray */
-        background-color: white;
-      }
-      body {
-        margin:0;
-        padding:0;
-      }
-      
-      .demo-box {
-        max-width:50%;
-        width:50%;
-        overflow:hidden;
-        border:0;
-        padding:0;
-        margin:0;
-        display:inline-block;
-        position:relative;
-        vertical-align:top;
-      }
-      .panel {
-        height: 400px; 
-        background-color: #efefef; 
-        padding: 10px; 
-        -webkit-border-radius: 12px; 
-        -moz-border-radius: 12px; 
-        margin: 10px;
-      }
-      .banner {
-        text-align: center; 
-        background-color: white; 
-        -webkit-border-radius: 10px; 
-        -moz-border-radius: 10px; 
-        margin-top: 0px; 
-        margin-bottom: 20px; 
-        padding: 8px
-      }
-      div.calendar {
-        max-width: 240px;
-        margin-left: auto;
-        margin-right: auto;
-      }
-      div.calendar table {
-        width: 100%;
-      }
-      div.dateField {
-        width: 150px;
-        padding: 6px;
-        -webkit-border-radius: 6px;
-        -moz-border-radius: 6px;
-        color: #555;
-        background-color: white;
-        margin-left: auto;
-        margin-right: auto;
-        text-align: center;
-      }
-      div#popupDateField:hover {
-        background-color: #cde;
-        cursor: pointer;
-      }
-      .calendars {
-        display:block;
-        border: dotted 1px #999;
-      }
-      .calendars li {
-        position: relative;
-        display: inline-block;
-        vertical-align: top;
-        padding:10px;
-      }
-      .calendarview-input {
-        position: relative;
-      }
-    </style>
+    <link rel="stylesheet" href="../stylesheets/prototypejs-calendar.css">
+    <link rel="stylesheet" href="../stylesheets/demo_styles.css">
+
     <script src="../javascripts/prototype.js"></script>
     <script src="../javascripts/date_patches.js"></script>
-    <script src="../javascripts/calendarview_remix.js"></script>
+    <script src="../javascripts/prototypejs-calendar.js"></script>
     <script>
       document.observe("dom:loaded", function() {
         
@@ -101,9 +19,9 @@
           'dateFormat': '%A %b %O, %Y'
         });
 
-        $('popupDateField').calendarviewable({
+        $('popupExample').calendarviewable({
           'dateField' : 'popupDateField',
-          'triggerElement': 'popupDateField',
+          // 'triggerElement': 'popupDateField',
           'futureOnly': true,
           'dateFormat': '%A %b %O, %Y'
         });
@@ -116,7 +34,8 @@
         //   });
         // });
         
-        Calendar.setupAll('.calendarview-input');
+        Calendar.setupAll('.calendarview-input','input');
+        Calendar.setupAll('.calendarview-div','.date-div');
         
       });
     </script>
@@ -128,8 +47,8 @@
         <h3 class="banner">
           Embedded Calendar
         </h3>
-        <div id="embeddedExample" style="">
-          <div id="embeddedCalendar" style="margin-left: auto; margin-right: auto">
+        <div id="embeddedExample">
+          <div id="embeddedCalendar" >
           </div>
           <br />
           <div id="embeddedDateField" class="dateField">
@@ -145,13 +64,13 @@
         <h3 class="banner">
           Popup Calendar
         </h3>
+          <div class="show-calendar">
         <div id="popupExample">
-          <div style="margin-top: 160px; width:220px; margin-left:auto; margin-right:auto; text-align:center">
             <div id="popupDateField" class="dateField">
               Show Calendar
             </div>
-          </div>
         </div>
+          </div>
       </div>
     </div><!--
     
@@ -163,26 +82,56 @@
         <ul class="calendars">
           <li>
             <div class="calendarview-input">
-              <label for="date_1">date 1</label><br />
+              <label for="date_1">Date One</label><br />
               <input type="text" name="date_1" value="" id="date_1" />
             </div>
           </li>
           <li>
             <div class="calendarview-input">
-              <label for="date_2">date 2</label><br />
+              <label for="date_2">Date Two</label><br />
               <input type="text" name="date_2" value="" id="date_2" />
             </div>
           </li>
           <li>
             <div class="calendarview-input">
-              <label for="date_3">date 3</label><br />
+              <label for="date_3">Date Three</label><br />
               <input type="text" name="date_3" value="" id="date_3" />
             </div>
           </li>
           <li>
             <div class="calendarview-input">
-              <label for="date_4">date 4</label><br />
+              <label for="date_4">Date Four</label><br />
               <input type="text" name="date_4" value="" id="date_4" />
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div><!--
+
+    --><div class="demo-box">
+      <div class="panel">
+        <h3 class="banner">
+          Multiple Calendars (divs)
+        </h3>
+        <ul class="calendars">
+          <li>
+            <div class="calendarview-div">
+              <div class="date-div">[no date]</div>
+            </div>
+          </li>
+          <li>
+            <div class="calendarview-div">
+              <div class="date-div">[no date]</div>
+            </div>
+          </li>
+          <li>
+            <div class="calendarview-div">
+              <div class="date-div">[no date]</div>
+            </div>
+          </li>
+          <li>
+            <div class="calendarview-div">
+              <div class="date-div">[no date]</div>
             </div>
           </li>
         </ul>

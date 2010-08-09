@@ -4,6 +4,7 @@ div.calendarview-calendar {
 }
 
 div.calendarview-calendar.calendarview-popup {
+  width: 175px;
 }
 
 div.calendarview-calendar table {
@@ -60,7 +61,7 @@ div.calendarview-calendar th.calendarview-button:active {
 }
 
 div.calendarview-calendar tr.calendarview-days td.calendarview-selected {
-  background-color: #f00;
+  background-color: #f00;/*#fff;*/
   color: #000;
 }
 
@@ -89,14 +90,19 @@ div.calendarview-calendar tr.calendarview-days td.calendarview-today.calendarvie
 }
 
 div.calendarview-calendar tr.calendarview-days td.calendarview-otherDay.calendarview-weekend {
-  background: #F3C6BA;
+/*  background: #F3C6BA;*/
 }
 
 div.calendarview-calendar tr.calendarview-days td.calendarview-selected.calendarview-weekend,
 div.calendarview-calendar tr.calendarview-days td.calendarview-today.calendarview-weekend.calendarview-selected {
+  color: #fff;
   background: #ffdd82;
 }
 
+.new-deposition-event-calendar .calendarview-calendar table thead tr th, 
+.new-deposition-event-calendar .calendarview-calendar table tbody tr td {
+  font-size: 11px;
+}
 .calendarview-calendar table thead tr th {
   height: 17px;
   line-height: 17px;
